@@ -1,0 +1,55 @@
+[project]
+name = "amap-mcp"
+dynamic = ["version"]
+description = "AMap MCP Server"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "amap",
+    "mcp",
+    "query-weather",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.109.2",
+    "uvicorn==0.27.1",
+    "python-dotenv==1.0.1",
+    "pydantic>=2.6.1",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+    "pytest>=8.0.0",
+    "requests>=2.31.0"
+]
+
+[project.scripts]
+amap-mcp = "amap_mcp.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit==3.6.2",
+    "ruff==0.3.0",
+    "fastmcp==0.4.1",
+    "pytest==8.0.0",
+    "pytest-cov==4.1.0",
+    "twine==6.1.0",
+    "build>=1.0.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["amap_mcp", "amap_mcp.amap"]
+
+[tool.hatch.version]
+path = "amap_mcp/__init__.py"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=amap_mcp --cov-report=term-missing"
