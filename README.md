@@ -1,5 +1,7 @@
 <p align="center">
+<a href="https://smithery.ai/server/@Francis235/amap-mcp"><img alt="Smithery Badge" src="https://smithery.ai/badge/@Francis235/amap-mcp"></a>
 <a href="https://pypi.org/project/amap-mcp/"><img src="https://img.shields.io/badge/pypi-amapmcp-green" alt="version"></a>
+
 
 Non-official AMap <a href="https://github.com/modelcontextprotocol">Model Context Protocol (MCP)</a> server that enables interaction with AMap powerful location related service. You can use in the following MCP clients like <a href="https://www.cursor.so">Cursor</a>, <a href="https://www.anthropic.com/claude">Claude Desktop</a>, <a href="https://cline.bot/">Cline</a> </a>, <a href="https://windsurf.com/editor">Windsurf</a> and other Client.
 
@@ -32,3 +34,5 @@ Go to Cursor -> Cursor Settings -> MCP, click `Add new global MCP server`, and m
 A demonstration video:
 ![Demo](https://raw.githubusercontent.com/Francis235/amap-mcp/master/.assets/amap-demo.gif)
 
+
+</readme>
